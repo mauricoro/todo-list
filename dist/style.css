@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto&display=swap');
+
+body{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+    align-items: center;
+    
+}
+input{
+    border: none;
+    outline: none;  
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+    text-align: center;
+    
+}
+.list{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.title input{
+    font-size: 100px;   
+}
+.item input{
+    font-size: 40px;   
+}

@@ -1,5 +1,5 @@
 class item{
-    constructor(title, description, dueDate, priority){
+    constructor(title, description, dueDate = "none", priority = "none"){
      this.title = title
      this.description = description
      this.dueDate = dueDate
