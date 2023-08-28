@@ -1,4 +1,4 @@
-export class list{
+export default class list{
    constructor(name){
     this.name = name
     this.items = []

@@ -1,9 +1,11 @@
-class item{
-    constructor(title, description, dueDate = "none", priority = "none"){
+export default class item{
+    constructor(title,  description, dueDate, priority, reference){
      this.title = title
      this.description = description
      this.dueDate = dueDate
      this.priority = priority
+     this.reference = reference
+
     }
 
     getTitle(){
@@ -17,7 +19,10 @@ class item{
     }  
     getPriority(){
         return this.priority;
-    }  
+    }
+    getReference(){
+        return this.reference;
+    }   
 
     setTitle(newTitle){
         this.title = newTitle;
@@ -31,4 +36,12 @@ class item{
     setPriority(newPriority){
         this.priority = newPriority;
     }    
+    setReference(newReference){
+        this.reference = newReference
+        this.reference.addEventListener("change", () => {
+                this.title = this.reference.value
+                // console.log("updated")
+                // console.log(this.reference.value)
+        }
+    )}      
  }
