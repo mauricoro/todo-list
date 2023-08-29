@@ -1,25 +1,27 @@
-//any imports
 import user from './user.js'
 import list from './list.js'
 import item from './item.js'
-//any globals
+import {createItemDom, createListDom, itemListener} from './dom.js'
 
-//don't need to load main page
+    const thisUser = new user()
+    let newList = new list("To-Do", createListDom())
+    let newItemDom = createItemDom()
+    let newItem = new item(newItemDom)
 
-//event listener to add todo item from dom js
-//listen()
-//on init create list object with to-do as the title and a object
-let newList = new list("To-Do")
-let newItem = new item("Test1")
-let newUser = new user()
-newList.addItem(newItem)
-newUser.addList(newList)
+    newList.getReference().querySelector(".items").appendChild(newItemDom)
+    newList.addItem(newItem)
+    itemListener(newItem,newList)
+    document.querySelector("div.lists").appendChild(newList.getReference())
 
-//item has to listen for whenever its updated to change its description
-//if new item is empty and then deleted then 
-let currentItem = document.querySelector(".item input")
-newItem.setReference(currentItem);
-console.log(newItem.getTitle())
+
+
+
+
+
+
+
+
+
 
 
 
