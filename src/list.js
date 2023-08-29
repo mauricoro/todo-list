@@ -1,6 +1,6 @@
 import item from './item.js'
 export default class list{
-   constructor(name, reference){
+   constructor(reference, name = "To-Do"){
     this.name = name
     this.reference = reference
     this.items = []

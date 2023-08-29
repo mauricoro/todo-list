@@ -49,9 +49,19 @@ export function itemListener(item, list){
          }
       })
 }
+ 
 
 function createItem(){
     return new item(createItemDom())
+}
+
+export function appendItem(list, item){
+    list.getReference().querySelector(".items").appendChild(item.getReference())
+
+}
+
+export function appendList(list){
+    document.querySelector("div.lists").appendChild(list.getReference())
 }
 
 

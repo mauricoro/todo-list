@@ -13,6 +13,7 @@ input{
     outline: none;  
     font-family: 'Roboto', 'Courier New', Courier, monospace;
     text-align: center;
+    width: 60vw;
     
 }
 .list{
