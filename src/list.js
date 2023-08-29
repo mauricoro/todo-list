@@ -50,7 +50,7 @@ export default class list{
    }
 
    removeItem(item){
-      this.items = items.splice(array.indexOf(item), 1);
+      this.items.splice(this.items.indexOf(item), 1);
    }
 
 }

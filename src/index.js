@@ -4,15 +4,15 @@ import item from './item.js'
 import {createItemDom, createListDom, itemListener, appendItem, appendList} from './dom.js'
 
 
-    const defaultUser = new user()
-    let defaultList = new list(createListDom())
-    let defaultItem = new item(createItemDom())
-    defaultList.addItem(defaultItem)
-    defaultUser.addList(defaultList)
+const defaultUser = new user()
+const defaultList = new list(createListDom())
+const defaultItem = new item(createItemDom())
+defaultList.addItem(defaultItem)
+defaultUser.addList(defaultList)
 
-    appendList(defaultList)
-    appendItem(defaultList, defaultItem)
-    itemListener(defaultItem,defaultList)
+appendList(defaultList)
+appendItem(defaultList, defaultItem)
+itemListener(defaultList,defaultItem)
 
 
 
