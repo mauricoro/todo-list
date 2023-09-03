@@ -1,56 +1,38 @@
-import item from './item.js'
-export default class list{
-   constructor(reference, name = "To-Do"){
-    this.name = name
+import item from "./item.js"
+export default class list {
+  constructor(reference, title = "Project", titleReference) {
+    this.title = title
     this.reference = reference
+    this.titleReference = titleReference
     this.items = []
-   }
-   
-   getName(){
-      return this.name
-   }
+  }
 
-   getItems(){
-      return this.items;
-   }
+  getTitle() {
+    return this.title
+  }
 
-   getReference(){
-      return this.reference;
-   }
+  getItems() {
+    return this.items
+  }
 
-   setName(newName){
-      this.name = newName
-   }
+  getReference() {
+    return this.reference
+  }
 
+  setTitle(newTitle) {
+    this.title = newTitle
+    this.titleReference.textContent = newTitle
+  }
 
+  setTitleReference(newReference) {
+    this.titleReference = newReference
+  }
 
-   addItem(newItem){
-   //    let itemReference = newItem.getReference()
-   //    let thisList = this;
-   //    itemReference.addEventListener('change', () => {
-   //       newItem.setTitle(itemReference.value)
-   //    })
+  addItem(newItem) {
+    this.items.push(newItem)
+  }
 
-   //   itemReference.addEventListener('keydown', function(event) {
-   //       if(event.key === "Enter"){
-   //           console.log("create new item")
-   //           let newItemDom = document.createElement('div')
-   //           newItemDom.classList.add("item")
-   //           let newInputDom = Object.assign(document.createElement('input'), { type: 'text', placeholder: 'Type here'});
-   //           newItemDom.appendChild(newInputDom)
-
-   //           let newItem = new item("test","test","test","test",newInputDom)
-   //           console.log(this)
-   //           thisList.addItem(newItem)
-
-   //       }
-   //    })
-
-      this.items.push(newItem)
-   }
-
-   removeItem(item){
-      this.items.splice(this.items.indexOf(item), 1);
-   }
-
+  removeItem(item) {
+    this.items.splice(this.items.indexOf(item), 1)
+  }
 }

@@ -1,12 +1,13 @@
-export default class user{
-    constructor(){
-        this.lists = []
+export default class user {
+  constructor() {
+    this.lists = []
+  }
 
-    }
+  addList(newList) {
+    this.lists.push(newList)
+  }
 
-    addList(newList){
-        this.lists.push(newList)
-    }
-
-    
+  getLists() {
+    return this.lists
+  }
 }
